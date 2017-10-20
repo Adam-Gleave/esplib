@@ -4,4 +4,9 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-    main.cpp
+    main.cpp \
+    src/esplib.cpp
+
+HEADERS += \
+    src/esptypes.hpp \
+    src/esplib.hpp

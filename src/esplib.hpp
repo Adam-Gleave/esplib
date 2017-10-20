@@ -8,9 +8,18 @@
  *
  */
 
-#include "src/esplib.hpp"
+#ifndef ESPLIB_H
+#define ESPLIB_H
 
-int main()
-{
-    ESP::readFile();
+#include <iostream>
+#include <fstream>
+
+namespace ESP {
+
+static const char* TEST_LOC = "Skyrim.esm";
+
+void readFile();
+
 }
+
+#endif // ESPLIB_H
