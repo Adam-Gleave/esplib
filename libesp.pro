@@ -9,4 +9,7 @@ SOURCES += \
 
 HEADERS += \
     src/esptypes.hpp \
-    src/esplib.hpp
+    src/esplib.hpp \
+    src/json.hpp
+
+DISTFILES +=

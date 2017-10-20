@@ -13,12 +13,24 @@
 
 #include <iostream>
 #include <fstream>
+#include <map>
+
+#include "json.hpp"
+#include "esptypes.hpp"
 
 namespace ESP {
 
 static const char* TEST_LOC = "Skyrim.esm";
+static const char* JSON_LOC = "tes4new.json";
 
 void readFile();
+nlohmann::json readJson();
+std::string readType(char** bufferptr);
+
+struct MapBuilder {
+    std::map<std::string, AbstractEspType*> espMap;
+    void build(nlohmann::json jdef, char* buffer);
+};
 
 }
 
